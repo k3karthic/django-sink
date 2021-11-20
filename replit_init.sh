@@ -10,10 +10,8 @@ rm -rf $HOME/.ssh &&
 mkdir $HOME/.ssh &&
 echo $SSH_CONFIG | base64 -d > $HOME/.ssh/config && 
 chmod 600 $HOME/.ssh/config &&
-echo $CODEBERG_SSH_KEY | base64 -d > $HOME/.ssh/codeberg && 
-chmod 400 $HOME/.ssh/codeberg &&
-echo $GITHUB_SSH_KEY | base64 -d > $HOME/.ssh/github && 
-chmod 400 $HOME/.ssh/github &&
+echo $SSH_KEY | base64 -d > $HOME/.ssh/id_rsa && 
+chmod 400 $HOME/.ssh/id_rsa &&
 [[ $(grep -c codeberg .git/config) -eq "0" ]] &&
 git remote add codeberg git@codeberg.org:k3karthic/django-sink.git
 
