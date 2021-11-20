@@ -13,7 +13,7 @@ chmod 600 $HOME/.ssh/config &&
 echo $CODEBERG_SSH_KEY | base64 -d > $HOME/.ssh/codeberg && 
 chmod 400 $HOME/.ssh/codeberg &&
 [[ $(grep -c codeberg .git/config) -eq "0" ]] &&
-git remote add codeberg git@codeberg.org:k3karthic/totp-generator-web.git
+git remote add codeberg git@codeberg.org:k3karthic/django-sink.git
 
 git config user.signingkey 9D183F822098553E
 git config user.email k3.karthic@protonmail.ch
