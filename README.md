@@ -11,13 +11,11 @@ View Online: [https://tornoddballobservatory.k3karthic.repl.co/](https://tornodd
 
 ## Replit
 
-`main.py` is run by [Replit](https://replit.com/) to start the Django server.
+[Replit](https://replit.com/) runs `main.py` to start the Django server. `main.py` in turn runs `replit_init.sh` to initialize the REPL with SSH & GPG.
 
-`replit_init.sh` is called from `main.py` to initialize the REPL with SSH & GPG.
+SSH configuration is for pushing updates to the Codeberg mirror. GPG configuration is for signing commits.
 
-The SSH configuration is used to push updates to the Codeberg mirror.
-
-GPG is used to sign commits. Run the following command from the shell before doing a commit,
+Run the following command from the shell before doing a commit,
 ```
 export GPG_TTY=$(tty)
 ```
