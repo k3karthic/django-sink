@@ -16,6 +16,8 @@ chmod 400 $HOME/.ssh/id_rsa &&
 git remote add codeberg git@codeberg.org:k3karthic/django-sink.git
 
 git remote set-url origin git@github.com:k3karthic/django-sink.git
+git remote set-url --add --push origin git@github.com:k3karthic/django-sink.git &&
+git remote set-url --add --push origin git@codeberg.org:k3karthic/django-sink.git &&
 git config user.signingkey 9D183F822098553E
 git config user.email k3.karthic@protonmail.ch
 git config user.name "Karthic Kumaran"
